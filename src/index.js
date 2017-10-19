@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from "react-redux";
-
+import { HashRouter } from 'react-router-dom'
 import store from './store';
 
 ReactDOM.render(
-  <Provider store={ store }>
+  <HashRouter>
+      <Provider store={ store }>
     <App />
-  </Provider>, 
-  document.getElementById('root')
+  </Provider>
+  </HashRouter>
+ , document.getElementById('root')
 );
 registerServiceWorker();
